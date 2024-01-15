@@ -1,11 +1,36 @@
-/* .title-page {
-    color: white;
-  } */
-  
-  button {
-    color: #FFF;
-  }
+* {
+    text-align: center;
+}
 
-  input {
+h1 {
+    font-size: 42px;
+    font-weight: 1000;
+    line-height: 66px;
+    text-transform: uppercase;
+    margin-bottom: 177px;
+}
+
+p {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+input {
     background-color: #FFF;
-  }
+    width: 392px;
+    height: 60px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    margin-right: 18px;
+}
+
+.validate {
+    color: #FFF;
+    background: #0177C7;
+    width: 144px;
+    height: 63px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    border: none;
+    cursor: pointer;
+}

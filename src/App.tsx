@@ -1,5 +1,8 @@
+// App.tsx
+
 import React, { useState } from 'react';
 import TitlePage from './components/TitlePage/TitlePage';
+import GamePage from './components/GamePage/GamePage';
 import './App.css';
 
 const App: React.FC = () => {
@@ -12,10 +15,14 @@ const App: React.FC = () => {
 
   return (
     <div className="app">
-      {/* Autres composants ou pages ici */}
-      {playerName === '' ? <TitlePage onStart={handleStartGame} /> : <div>La suite du jeu ici</div> }
+      {playerName === '' ? (
+        <TitlePage onStart={handleStartGame} />
+      ) : (
+        <GamePage playerName={playerName} />
+      )}
     </div>
   );
 };
 
 export default App;
+
