@@ -1,55 +1,25 @@
-/* Dans votre fichier CSS, par exemple GamePage.css */
-.game-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    margin: 20px;
-  }
-  
-  .grid-container {
-    width: 300px;
-    height: 300px;
-    background-color: lightblue;
-    /* Styles de votre quadrillage bleu */
-  }
-  
-  .keyboard-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  
-  .keyboard-row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .selected-letters-container {
-    text-align: center;
-  }
-  
-  .selected-letters {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 5px;
-    font-size: 18px;
-  }
-  
+/* GamePage.css */
 
-/* .correct {
-  color: red;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 8px; /* Espacement entre les cellules */
 }
 
-.default {
-  color: blue;
-} */
+.grid-cell {
+  width: 40px; /* Ajustez la largeur selon vos besoins */
+  height: 40px; /* Ajustez la hauteur selon vos besoins */
+  background-color: #0177C7; /* Couleur de fond de la cellule */
+  color: white; /* Couleur du texte dans la cellule */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 16px; /* Ajustez la taille de la police selon vos besoins */
+  border-radius: 5px; /* Bordure arrondie */
+}

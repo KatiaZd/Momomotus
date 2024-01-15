@@ -1,5 +1,3 @@
-// App.tsx
-
 import React from 'react';
 import TitlePage from './components/TitlePage/TitlePage';
 import GamePage from './components/GamePage/GamePage';

@@ -1,4 +1,3 @@
-// Dans votre composant GamePage.tsx
 import React from 'react';
 import Header from '../Header/Header';
 import './GamePage.css';
@@ -10,7 +9,7 @@ interface GamePageProps {
 }
 
 const GamePage: React.FC<GamePageProps> = ({ playerName }) => {
-  const [wordToGuess] = useState<string>('REACT');
+  const [wordToGuess] = useState<string>('IMPLEMENTER');
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
   const [feedback, setFeedback] = useState<string[]>([]);
 
@@ -22,28 +21,22 @@ const GamePage: React.FC<GamePageProps> = ({ playerName }) => {
   };
 
   const checkCorrectness = (letter: string): boolean => {
-    // Implémentez la logique pour vérifier si la lettre est correcte
-    // Retournez true si la lettre est correcte, false sinon
     const correctIndex = wordToGuess.indexOf(letter);
     return correctIndex !== -1 && correctIndex === guessedLetters.length;
   };
 
   const handleDeleteClick = () => {
-    // Implémentez la logique pour supprimer la dernière lettre
     setGuessedLetters(guessedLetters.slice(0, -1));
     setFeedback(feedback.slice(0, -1));
   };
 
   const handleValidateClick = () => {
-    // Implémentez la logique pour valider la proposition
-    // Vous pouvez ajouter du code ici pour traiter la fin de la partie, etc.
     console.log('Validation clicked');
   };
 
   return (
     <div className="game-page">
       <Header title="Momomotus" playerName={playerName} />
-      {/* Affichez la première lettre du mot en rouge */}
       <div className="word-display">
         {wordToGuess.split('').map((char, index) => (
           <span
@@ -54,7 +47,18 @@ const GamePage: React.FC<GamePageProps> = ({ playerName }) => {
           </span>
         ))}
       </div>
-      {/* Reste du contenu de la page de jeu */}
+      {/* Grille bleue */}
+      <div className="grid">
+        {Array.from({ length: 8 }, (_, rowIndex) => (
+          <div key={rowIndex} className="grid-row">
+            {Array.from({ length: 6 }, (_, colIndex) => (
+              <div key={colIndex} className="grid-cell">
+                {guessedLetters[rowIndex * 6 + colIndex]}
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
       <Keyboard 
       onLetterClick={handleLetterClick} 
       onDeleteClick={handleDeleteClick}
