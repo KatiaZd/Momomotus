@@ -1,11 +1,13 @@
 import React from 'react';
+import './Header.css';
 import RulesModal from '../RulesModal/RulesModal';
 
 interface HeaderProps {
   title: string;
+  playerName?: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ title }) => {
+const Header: React.FC<HeaderProps> = ({ title, playerName }) => {
     const [showRulesModal, setShowRulesModal] = React.useState(false);
   
     const handleOpenRules = () => {
@@ -18,6 +20,7 @@ const Header: React.FC<HeaderProps> = ({ title }) => {
   
     return (
       <header>
+        {playerName && <p>Prêt.e {playerName} ?</p>}
         <h1>{title}</h1>
         <button onClick={handleOpenRules}>
         <svg xmlns="http://www.w3.org/2000/svg" width="51" height="51" viewBox="0 0 51 51" fill="none">

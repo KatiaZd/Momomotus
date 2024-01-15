@@ -18,12 +18,10 @@ const TitlePage: React.FC<TitlePageProps> = ({ onStart }) => {
 
   return (
     <div className="title-page">
-    <h1>Momomotus <br /> 🟥🟡🟦</h1>
-      <p>Pour commencer, quel est ton prénom ?</p>
-    <input type="text" value={name} onChange={handleInputChange} />
-    <button className="validate" onClick={handleStartClick}>Let's go !</button>
-     
-      
+        <h1>Momomotus <br /> 🟥🟡🟦</h1>
+        <p>Pour commencer, quel est ton prénom ?</p>
+        <input type="text" value={name} onChange={handleInputChange} />
+        <button className="validate" onClick={handleStartClick}>Let's go !</button>
     </div>
   );
 

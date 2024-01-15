@@ -1,0 +1,12 @@
+.rules-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 1000; /* Valeur élevée pour placer la modale au-dessus du reste de la page */
+    background-color: #fff;
+    padding: 2px;
+  }
+  

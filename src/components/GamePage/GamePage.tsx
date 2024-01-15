@@ -11,7 +11,8 @@ interface GamePageProps {
 const GamePage: React.FC<GamePageProps> = ({ playerName }) => {
   return (
     <div className="game-page">
-      <Header title={`Prêt.e ${playerName} ?`} />
+    
+      <Header title="Momomotus" playerName={playerName} />
       {/* Reste du contenu de la page de jeu */}
     </div>
   );
