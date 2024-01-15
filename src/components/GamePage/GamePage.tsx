@@ -1,11 +1,11 @@
-// GamePage.tsx
 
 import React from 'react';
 import Header from '../Header/Header';
 import './GamePage.css';
 
+
 interface GamePageProps {
-  playerName: string;
+  playerName?: string;
 }
 
 const GamePage: React.FC<GamePageProps> = ({ playerName }) => {
