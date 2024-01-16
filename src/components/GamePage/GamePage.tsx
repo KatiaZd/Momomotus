@@ -48,16 +48,18 @@ const GamePage: React.FC<GamePageProps> = ({ playerName }) => {
         ))}
       </div>
       {/* Grille bleue */}
-      <div className="grid">
-        {Array.from({ length: 8 }, (_, rowIndex) => (
-          <div key={rowIndex} className="grid-row">
-            {Array.from({ length: 6 }, (_, colIndex) => (
-              <div key={colIndex} className="grid-cell">
-                {guessedLetters[rowIndex * 6 + colIndex]}
-              </div>
-            ))}
-          </div>
-        ))}
+      <div className="grid-container">
+        <div className="grid">
+          {Array.from({ length: 8 }, (_, rowIndex) => (
+            <div key={rowIndex} className="grid-row">
+              {Array.from({ length: 6 }, (_, colIndex) => (
+                <div key={colIndex} className="grid-cell">
+                  {guessedLetters[rowIndex * 6 + colIndex]}
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
       <Keyboard 
       onLetterClick={handleLetterClick} 

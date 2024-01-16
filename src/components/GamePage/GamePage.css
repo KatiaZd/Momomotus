@@ -1,13 +1,23 @@
+.grid-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+-webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(8, 0fr);
   gap: 1px; 
   border: 3px solid pink;
+
 }
 
 .grid-cell {
-  width: 40px; 
-  height: 40px; 
+  width: 63.703px; 
+  height: 63.703px; 
   background-color: #0177C7; 
   color: white; 
   display: -webkit-box;
